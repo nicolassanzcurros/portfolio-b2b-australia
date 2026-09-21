@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate-600 antialiased;
+    background-color: #f7f1e4;
+    /* Fixed mesh gradient — cream, sage and a hint of peach, soft radial
+       washes that stay put while the page scrolls (adds depth). */
+    background-image: radial-gradient(
+        1100px 780px at 8% -8%,
+        rgba(220, 227, 211, 0.85) 0%,
+        rgba(220, 227, 211, 0) 60%
+      ),
+      radial-gradient(
+        900px 680px at 100% 0%,
+        rgba(240, 228, 211, 0.85) 0%,
+        rgba(240, 228, 211, 0) 55%
+      ),
+      radial-gradient(
+        1100px 820px at 45% 115%,
+        rgba(220, 227, 211, 0.7) 0%,
+        rgba(220, 227, 211, 0) 65%
+      );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-accent/15 text-ink;
+  }
+}
+
+@layer utilities {
+  /* Elegant "arch" mask for the profile portrait (Halpin-style). */
+  .mask-arch {
+    border-radius: 999px 999px 1.5rem 1.5rem;
+  }
+}

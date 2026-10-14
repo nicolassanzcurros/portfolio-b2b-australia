@@ -9,3 +9,6 @@ npm-debug.log*
 next-env.d.ts
 .vercel
 *.tsbuildinfo
+
+# Raw screen recordings (web versions live in public/videos)
+*.mov
